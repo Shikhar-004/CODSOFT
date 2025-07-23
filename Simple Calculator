@@ -1,0 +1,43 @@
+def Addition(a, b):
+    return a + b
+
+def Subtraction(a, b):
+    return a - b
+
+def Multiplication(a, b):
+    return a * b
+
+def Division(a, b):
+    return a / b
+
+while True:
+    try:
+        num1 = int(input("Enter the First number: "))
+        num2 = int(input("Enter the Second number: "))
+
+        print("1 Addition")
+        print("2 Subtraction")
+        print("3 Multiplication")
+        print("4 Division")
+
+        choice = int(input("Enter your choice of arithmetic operation: "))
+
+        if choice == 1:
+            print("Result:", Addition(num1, num2))
+        elif choice == 2:
+            print("Result:", Subtraction(num1, num2))
+        elif choice == 3:
+            print("Result:", Multiplication(num1, num2))
+        elif choice == 4:
+            if num2 == 0:
+                print("Error: The number cannot be divide by zero.")
+            else:
+                print("Result:", Division(num1, num2))
+        else:
+            print(" Please select a valid arithmetic operation.")
+
+    except ValueError:
+        print("Please enter valid numbers.")
+    except KeyboardInterrupt:
+        print("\nExecution interrupted by the user.")
+        break
